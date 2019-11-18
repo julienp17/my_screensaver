@@ -11,5 +11,6 @@
     #define W_WIDTH         800
     #define W_HEIGHT        600
     #define W_BPP           32
+    #define W_MAX_FPS       30
     #define W_TITLE         "My ScreenSaver"
 #endif
