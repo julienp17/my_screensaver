@@ -10,34 +10,48 @@
 #include "window.h"
 #include "framebuffer.h"
 
-void poll_events(sfRenderWindow *window, sfEvent *event);
+void poll_events(sfRenderWindow *window);
 void (*get_animation_by_id(unsigned int nb))(framebuffer_t*);
+void destroy_all(framebuffer_t *framebuffer, sfSprite *sprite,
+                sfTexture *texture, sfRenderWindow *window);
 
-int display_screensaver(unsigned int animation_id)
+void display_screensaver(void (*play_animation)(framebuffer_t *framebuffer))
 {
     sfVideoMode mode = {W_WIDTH, W_HEIGHT, W_BPP};
-    sfRenderWindow *window = NULL;
-    sfEvent event;
+    sfRenderWindow *window = sfRenderWindow_create(mode, W_TITLE, sfClose, 0);
     framebuffer_t *framebuffer = framebuffer_create(W_WIDTH, W_HEIGHT);
-    void (*play_animation)(framebuffer_t*) = NULL;
+    sfTexture *texture = sfTexture_create(W_WIDTH, W_HEIGHT);
+    sfSprite *sprite = sfSprite_create();
 
-    window = sfRenderWindow_create(mode, W_TITLE, sfClose, NULL);
+    sfSprite_setTexture(sprite, texture, sfTrue);
+    sfRenderWindow_setFramerateLimit(window, W_MAX_FPS);
     while (sfRenderWindow_isOpen(window)) {
-        poll_events(window, &event);
-        play_animation = get_animation_by_id(animation_id);
-        sfRenderWindow_clear(window, sfBlack);
+        poll_events(window);
         play_animation(framebuffer);
+        sfTexture_updateFromPixels(texture, framebuffer->pixels,
+                                    W_WIDTH, W_HEIGHT, 0, 0);
+        sfRenderWindow_clear(window, sfBlack);
+        sfRenderWindow_drawSprite(window, sprite, NULL);
         sfRenderWindow_display(window);
     }
-    framebuffer_destroy(framebuffer);
-    sfRenderWindow_destroy(window);
-    return (0);
+    destroy_all(framebuffer, sprite, texture, window);
 }
 
-void poll_events(sfRenderWindow *window, sfEvent *event)
+void poll_events(sfRenderWindow *window)
 {
-    while (sfRenderWindow_pollEvent(window, event)) {
-        if (event->type == sfEvtClosed)
+    sfEvent event;
+
+    while (sfRenderWindow_pollEvent(window, &event)) {
+        if (event.type == sfEvtClosed)
             sfRenderWindow_close(window);
     }
+}
+
+void destroy_all(framebuffer_t *framebuffer, sfSprite *sprite,
+                sfTexture *texture, sfRenderWindow *window)
+{
+    framebuffer_destroy(framebuffer);
+    sfSprite_destroy(sprite);
+    sfTexture_destroy(texture);
+    sfRenderWindow_destroy(window);
 }
