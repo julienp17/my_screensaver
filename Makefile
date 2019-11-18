@@ -15,10 +15,9 @@ SRC			= 	$(addprefix $(SRC_D), $(SRC_F))
 OBJ 		= 	$(SRC:.c=.o)
 SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
-				screensaver.c \
-				animations.c \
+				window.c \
+				get_animation.c \
 				animations/purple_rain.c \
-				animations/starfield.c \
 				data_structures/framebuffer.c \
 				shapes/line.c \
 
