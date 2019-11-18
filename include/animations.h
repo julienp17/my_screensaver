@@ -8,8 +8,8 @@
 #ifndef ANIMATIONS_H_
     #define ANIMATIONS_H_
 
-    #include "framebuffer.h"
+    #include "window.h"
 
-    void purple_rain(framebuffer_t *framebuffer);
-    void starfield(framebuffer_t *framebuffer);
+    void (*get_animation_from_id(unsigned int nb))(window_t*);
+    void purple_rain(window_t *window);
 #endif
