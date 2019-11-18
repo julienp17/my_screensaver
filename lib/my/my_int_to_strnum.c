@@ -24,7 +24,7 @@ char *my_int_to_strnum(int nb)
         return ("0");
     }
     while (nb != 0) {
-        strnum[i++] = nb + '0';
+        strnum[i++] = nb % 10 + '0';
         nb = nb / 10;
     }
     if (is_neg)
