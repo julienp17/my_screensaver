@@ -7,15 +7,14 @@
 
 #include <stddef.h>
 #include "animations.h"
-#include "framebuffer.h"
+#include "window.h"
 
-void (*get_animation_by_id(unsigned int nb))(framebuffer_t*)
+void (*get_animation_from_id(unsigned int nb))(window_t*)
 {
     unsigned int i = 0;
-    void (*animation)(framebuffer_t*) = NULL;
-    void (*animations[])(framebuffer_t*) = {
+    void (*animation)(window_t*) = NULL;
+    void (*animations[])(window_t*) = {
         &purple_rain,
-        &starfield
     };
 
     while (i < nb - 1)
