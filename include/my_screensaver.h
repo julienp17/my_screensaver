@@ -21,7 +21,7 @@
     void print_help(void);
     void print_usage(void);
     void print_options(void);
-    bool check_option(char *str);
+    bool is_option(char *str);
 
     void display_screensaver(void (*play_animation)(framebuffer_t*));
 #endif
