@@ -9,6 +9,7 @@
     #define MY_SCREENSAVER_H_
 
     #include <stdbool.h>
+    #include "framebuffer.h"
 
     #define MY_EXIT_SUCCESS             0
     #define MY_EXIT_FAILURE             84
@@ -22,5 +23,5 @@
     void print_options(void);
     bool check_option(char *str);
 
-    int display_screensaver(unsigned int animation_id);
+    void display_screensaver(void (*play_animation)(framebuffer_t*));
 #endif
