@@ -16,10 +16,11 @@ OBJ 		= 	$(SRC:.c=.o)
 SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
 				screensaver.c \
-				framebuffer.c \
 				animations.c \
 				animations/purple_rain.c \
 				animations/starfield.c \
+				data_structures/framebuffer.c \
+				shapes/line.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
@@ -44,7 +45,7 @@ all: $(NAME)
 
 $(NAME): makelib $(OBJ) $(OBJ_M)
 	@echo -e "\e[1;32mCompiling $(NAME) binary... \e[0m"
-	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS) $(DBFLAGS)
+	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS)
 
 makelib:
 	make -C ./lib/my/ all
