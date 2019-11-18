@@ -30,4 +30,5 @@
                             char const *title);
     void window_refresh(window_t *window);
     void window_destroy(window_t *window);
+    void poll_events(sfRenderWindow *window);
 #endif
