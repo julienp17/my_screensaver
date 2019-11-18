@@ -15,12 +15,14 @@ int check_args(int ac, char **av)
         my_puterr(av[0]);
         my_puterr(": bad arguments: ");
         my_puterr(my_int_to_strnum(ac - 1));
-        my_puterr(" given but 1 is required.\n");
+        my_puterr(" given but 1 is required\n");
         my_puterr("retry with -h\n");
         return (MY_EXIT_FAILURE);
     }
-    if (check_option(av[1]))
+    if (is_option(av[1])) {
+        print_help();
         return (MY_EXIT_OPTION);
+    }
     if (!my_str_isnum_pos(av[1])) {
         my_puterr("Given argument is not a positive number.");
         print_usage();
@@ -29,12 +31,10 @@ int check_args(int ac, char **av)
     return (MY_EXIT_SUCCESS);
 }
 
-bool check_option(char *str)
+bool is_option(char *str)
 {
-    if (my_strcmp(str, "-h") == 0 || my_strcmp(str, "--help") == 0) {
-        print_help();
+    if (my_strcmp(str, "-h") == 0 || my_strcmp(str, "--help") == 0)
         return (true);
-    }
     return (false);
 }
 
