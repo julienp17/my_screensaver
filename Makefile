@@ -25,7 +25,13 @@ SRC_F 		= 	usage.c \
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
 SRC_UT_D 	= 	tests/
-SRC_UT_F 	= 	
+SRC_UT_F 	= 	test_usage.c \
+				libmy/test_my_int_to_strnum.c \
+				libmy/test_my_puterr.c \
+				libmy/test_my_str_isnum_pos.c \
+				libmy/test_my_strcmp.c \
+				libmy/test_my_strlen.c \
+				libmy/test_my_strnum_to_uint.c \
 
 INC			= 	-I./include/
 
@@ -60,14 +66,10 @@ tests_run: clean $(OBJ) $(OBJ_UT)
 clean:
 	@echo -e "\e[1;32mRemoving source object files...\e[0m"
 	rm -f $(OBJ)
-	@echo -e "\e[1;32mRemoving source coverage files...\e[0m"
-	rm -f $(SRC_F:.c=.gcda)
-	rm -f $(SRC_F:.c=.gcno)
 	@echo -e "\e[1;32mRemoving unit_tests object files... \e[0m"
 	rm -f $(OBJ_UT)
-	@echo -e "\e[1;32mRemoving unit_tests coverage files...\e[0m"
-	rm -f $(SRC_UT_F:.c=.gcda)
-	rm -f $(SRC_UT_F:.c=.gcno)
+	@echo -e "\e[1;32mRemoving coverage files...\e[0m"
+	rm -f *.gc*
 
 fclean: clean
 	@echo -e "\e[1;32mRemoving $(NAME) binary...\e[0m"
