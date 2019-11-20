@@ -25,8 +25,13 @@ int main(int ac, char **av)
     else if (error_code == MY_EXIT_FAILURE)
         return (MY_EXIT_FAILURE);
     animation_id = my_strnum_to_uint(av[1]);
+    if (animation_id < 1 || animation_id > MAX_ID) {
+        my_puterr("Incorrect animation id\nretry with -d\n");
+        return (MY_EXIT_FAILURE);
+    }
     play_animation = get_animation_from_id(animation_id);
     window = window_create(W_WIDTH, W_HEIGHT, W_TITLE);
     play_animation(window);
+    window_destroy(window);
     return (MY_EXIT_SUCCESS);
 }
