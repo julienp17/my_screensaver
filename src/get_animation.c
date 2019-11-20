@@ -14,7 +14,7 @@ void (*get_animation_from_id(unsigned int nb))(window_t*)
     unsigned int i = 0;
     void (*animation)(window_t*) = NULL;
     void (*animations[])(window_t*) = {
-        &purple_rain,
+        &rainbow_rain,
     };
 
     while (i < nb - 1)
