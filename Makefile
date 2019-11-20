@@ -18,7 +18,7 @@ SRC_F 		= 	usage.c \
 				window.c \
 				get_animation.c \
 				utils.c \
-				animations/purple_rain.c \
+				animations/rainbow_rain.c \
 				data_structures/framebuffer.c \
 				shapes/line.c \
 

@@ -6,13 +6,13 @@
 */
 
 #include <stdlib.h>
-#include "purple_rain.h"
+#include "rainbow_rain.h"
 #include "window.h"
 #include "shapes.h"
 
 float get_random_float(float const min, float const max);
 
-void purple_rain(window_t *window)
+void rainbow_rain(window_t *window)
 {
     droplet_t **droplets = malloc(sizeof(*droplets) * NB_DROPLETS);
 

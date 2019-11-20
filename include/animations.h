@@ -13,5 +13,5 @@
     #define MAX_ID          1
 
     void (*get_animation_from_id(unsigned int nb))(window_t*);
-    void purple_rain(window_t *window);
+    void rainbow_rain(window_t *window);
 #endif
