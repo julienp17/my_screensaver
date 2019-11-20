@@ -17,6 +17,7 @@ SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
 				window.c \
 				get_animation.c \
+				utils.c \
 				animations/purple_rain.c \
 				data_structures/framebuffer.c \
 				shapes/line.c \
@@ -25,6 +26,7 @@ SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
 SRC_UT_D 	= 	tests/
 SRC_UT_F 	= 	test_usage.c \
+				test_get_random_float.c \
 				libmy/test_my_int_to_strnum.c \
 				libmy/test_my_puterr.c \
 				libmy/test_my_str_isnum_pos.c \
@@ -32,7 +34,7 @@ SRC_UT_F 	= 	test_usage.c \
 				libmy/test_my_strlen.c \
 				libmy/test_my_strnum_to_uint.c \
 
-INC			= 	-I./include/
+INC			= 	-I./include/ -I./include/animations
 
 CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS)
 
@@ -50,7 +52,7 @@ all: $(NAME)
 
 $(NAME): makelib $(OBJ) $(OBJ_M)
 	@echo -e "\e[1;32mCompiling $(NAME) binary... \e[0m"
-	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS) $(DBFLAGS)
 
 makelib:
 	make -C ./lib/my/ all
