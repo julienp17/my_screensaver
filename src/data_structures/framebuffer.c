@@ -19,11 +19,11 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
     return (framebuffer);
 }
 
-void framebuffer_clear(framebuffer_t *framebuffer)
+void framebuffer_clear(framebuffer_t *framebuffer, sfColor color)
 {
     for (unsigned int row = 0 ; row < framebuffer->height ; row++)
         for (unsigned int col = 0 ; col < framebuffer->width ; col++)
-            my_put_pixel(framebuffer, col, row, sfBlack);
+            my_put_pixel(framebuffer, col, row, color);
 }
 
 void framebuffer_destroy(framebuffer_t *framebuffer)

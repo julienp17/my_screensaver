@@ -17,7 +17,7 @@
     } framebuffer_t;
 
     framebuffer_t *framebuffer_create(unsigned int width, unsigned int height);
-    void framebuffer_clear(framebuffer_t *framebuffer);
+    void framebuffer_clear(framebuffer_t *framebuffer, sfColor color);
     void framebuffer_destroy(framebuffer_t *framebuffer);
     void my_put_pixel(framebuffer_t *framebuffer,
                         unsigned int x,
