@@ -13,6 +13,7 @@
     #define NB_SNOWFLAKES        250
     #define SPEED                1.0
     #define MAX_SIZE_SNOWFLAKE   10
+    #define BACKGROUND_COLOR     200, 200, 200, 255
 
     typedef struct snowflake {
         sfVector3f pos;
