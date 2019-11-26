@@ -21,7 +21,7 @@ void rainbow_rain(window_t *window)
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
         display_droplets(window->framebuffer, droplets);
-        window_refresh(window, sfBlack);
+        window_refresh(window, &sfBlack);
     }
     for (unsigned int i = 0 ; i < NB_DROPLETS ; i++)
         free(droplets[i]);
