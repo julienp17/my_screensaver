@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2019
 ** My Screensaver
 ** File description:
-** Header file for purple_rain
+** Header file for rainbow_rain
 */
 
-#ifndef PURPLE_RAIN_H
-    #define PURPLE_RAIN_H
+#ifndef RAINBOW_RAIN_H
+    #define RAINBOW_RAIN_H
 
     #include <SFML/Graphics.h>
     #include "window.h"
@@ -22,7 +22,7 @@
         sfColor color;
     } droplet_t;
 
-    void purple_rain(window_t *window);
+    void rainbow_rain(window_t *window);
     void display_droplets(framebuffer_t *framebuffer, droplet_t **droplets);
     droplet_t *droplet_create(void);
     void droplet_fall(droplet_t *droplet);

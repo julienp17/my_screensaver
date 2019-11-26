@@ -9,11 +9,11 @@
     #define BOUNCING_BALL_H_
 
     #include <SFML/Graphics.h>
+    #include "window.h"
+    #include "circle.h"
 
-    typedef struct circle {
-        sfVector2f center;
-        sfVector2f speed;
-        unsigned int radius;
-        sfColor color;
-    } circle_t;
+    #define MAX_X_SPEED         10
+    #define MAX_Y_SPEED         10
+
+    void bouncing_ball(window_t *window);
 #endif
