@@ -12,8 +12,10 @@
     #include "window.h"
     #include "circle.h"
 
-    #define MAX_X_SPEED         10
-    #define MAX_Y_SPEED         10
+    #define BALL_SPEED          5
+    #define BALL_RADIUS         40
 
     void bouncing_ball(window_t *window);
+    void check_ball_bounce(circle_t *circle, unsigned int width_limit,
+                        unsigned int height_limit);
 #endif
