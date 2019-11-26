@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <SFML/Graphics.h>
 #include "framebuffer.h"
-#include "shapes.h"
+#include "line.h"
 
 void draw_line(framebuffer_t *framebuffer, sfVector2f point_a,
                 sfVector2f point_b, sfColor color)
@@ -24,4 +24,14 @@ void draw_line(framebuffer_t *framebuffer, sfVector2f point_a,
         x = x + (dx / (float)steps);
         y = y + (dy / (float)steps);
     }
+}
+
+line_t *line_create(sfVector2f point_a, sfVector2f point_b, sfColor color)
+{
+    line_t *line = malloc(sizeof(*line));
+
+    line->point_a = point_a;
+    line->point_b = point_b;
+    line->color = color;
+    return (line);
 }
