@@ -22,6 +22,7 @@ SRC_F 		= 	usage.c \
 				animations/rainbow_rain.c \
 				animations/blizzard.c \
 				animations/bouncing_ball.c \
+				animations/circus_circles.c \
 				animations/game_of_life.c \
 				animations/radar.c \
 				data_structures/framebuffer.c \
