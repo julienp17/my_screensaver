@@ -13,6 +13,11 @@ int get_random_int(int const min, int const max)
     return ((rand() / RAND_MAX * (max - min)) + min);
 }
 
+int get_random_choice_int(int choice1, int choice2)
+{
+    return ((rand() % 2 == 0) ? choice1 : choice2);
+}
+
 float get_random_float(float const min, float const max)
 {
     return ((float)rand() / (float)(RAND_MAX) * (max - min) + min);
