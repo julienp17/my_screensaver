@@ -8,6 +8,11 @@
 #include <stdlib.h>
 #include <SFML/Graphics.h>
 
+int get_random_int(int const min, int const max)
+{
+    return ((rand() / RAND_MAX * (max - min)) + min);
+}
+
 float get_random_float(float const min, float const max)
 {
     return ((float)rand() / (float)(RAND_MAX) * (max - min) + min);
