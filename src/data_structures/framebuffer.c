@@ -37,6 +37,8 @@ void my_put_pixel(framebuffer_t *framebuffer, unsigned int x, unsigned int y,
 {
     unsigned int pos = ((y * framebuffer->width + x) * 4);
 
+    if (pos > (framebuffer->width * framebuffer->height * 4))
+        return;
     framebuffer->pixels[pos] = color.r;
     framebuffer->pixels[pos + 1] = color.g;
     framebuffer->pixels[pos + 2] = color.b;
