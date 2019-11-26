@@ -24,7 +24,7 @@ int check_args(int ac, char **av)
         return (MY_EXIT_OPTION);
     }
     if (!my_str_isnum_pos(av[1])) {
-        my_puterr("Given argument is not a positive number.");
+        my_puterr("Given argument is not a positive number.\n");
         print_usage();
         return (MY_EXIT_FAILURE);
     }
