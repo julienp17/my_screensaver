@@ -11,5 +11,6 @@
     #define INTERVAL            500
     #define CIRCLES_OPACITY     180
     #define CIRCLES_DISTANCE    50
+    #define OUTLINE_DISTANCE    10
 
 #endif
