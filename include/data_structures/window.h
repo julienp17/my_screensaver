@@ -28,7 +28,7 @@
 
     window_t *window_create(unsigned int width, unsigned int height,
                             char const *title);
-    void window_refresh(window_t *window, sfColor color);
+    void window_refresh(window_t *window, sfColor *color);
     void window_destroy(window_t *window);
     void poll_events(sfRenderWindow *window);
 #endif

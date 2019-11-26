@@ -33,14 +33,15 @@ window_t *window_create(unsigned int width, unsigned int height,
     return (window);
 }
 
-void window_refresh(window_t *window, sfColor color)
+void window_refresh(window_t *window, sfColor *color)
 {
     sfTexture_updateFromPixels(window->texture, window->framebuffer->pixels,
                                 window->width, window->height, 0, 0);
-    sfRenderWindow_clear(window->window, color);
+    sfRenderWindow_clear(window->window, sfBlack);
     sfRenderWindow_drawSprite(window->window, window->sprite, NULL);
     sfRenderWindow_display(window->window);
-    framebuffer_clear(window->framebuffer, color);
+    if (color)
+        framebuffer_clear(window->framebuffer, *(color));
 }
 
 void window_destroy(window_t *window)
