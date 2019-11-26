@@ -18,7 +18,9 @@ SRC_F 		= 	usage.c \
 				window.c \
 				get_animation.c \
 				random.c \
+				utils.c \
 				animations/rainbow_rain.c \
+				animations/blizzard.c \
 				animations/bouncing_ball.c \
 				animations/game_of_life.c \
 				animations/radar.c \
@@ -44,7 +46,7 @@ INC			= 	-I./include/ \
 				-I./include/data_structures \
 				-I./include/shapes \
 
-CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS) $(DBFLAGS)
+CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS)
 
 LDFLAGS		=	-L./lib -lmy -lcsfml-graphics -lcsfml-system -lm
 
@@ -60,7 +62,7 @@ all: $(NAME)
 
 $(NAME): makelib $(OBJ) $(OBJ_M)
 	@echo -e "\e[1;32mCompiling $(NAME) binary... \e[0m"
-	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS) $(DBFLAGS)
+	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS)
 
 makelib:
 	make -C ./lib/my/ all
