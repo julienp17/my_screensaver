@@ -8,17 +8,22 @@
 #include <stddef.h>
 #include "animations.h"
 #include "window.h"
+#include "my.h"
 
-void (*get_animation_from_id(unsigned int nb))(window_t*)
+void (*get_animation_from_id(unsigned int animation_id))(window_t*)
 {
-    unsigned int i = 0;
     void (*animation)(window_t*) = NULL;
     void (*animations[])(window_t*) = {
         &rainbow_rain,
+        &bouncing_ball,
+        &game_of_life,
+        &radar
     };
 
-    while (i < nb - 1)
-        i = i + 1;
-    animation = animations[i];
+    if (animation_id < 1 || animation_id > MAX_ID) {
+        my_puterr("Incorrect animation id\nretry with -d\n");
+        return (NULL);
+    }
+    animation = animations[animation_id - 1];
     return (animation);
 }
