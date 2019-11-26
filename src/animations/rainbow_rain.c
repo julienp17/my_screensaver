@@ -8,9 +8,8 @@
 #include <stdlib.h>
 #include "rainbow_rain.h"
 #include "window.h"
-#include "shapes.h"
-
-float get_random_float(float const min, float const max);
+#include "line.h"
+#include "random.h"
 
 void rainbow_rain(window_t *window)
 {
