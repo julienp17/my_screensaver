@@ -26,7 +26,7 @@ void circus_circles(window_t *window)
             display_circles(window, center, i);
             sfClock_restart(clock);
         }
-        if (i < window->height / 2)
+        if (i < window->height / 2 - OUTLINE_DISTANCE)
             i++;
         window_refresh(window, NULL);
     }
@@ -34,21 +34,21 @@ void circus_circles(window_t *window)
 
 void display_circles(window_t *window, sfVector2f center, unsigned int index)
 {
-    sfColor random_color;
+    sfColor random_color = get_random_color(CIRCLES_OPACITY);
 
     if (index < window->height / 2) {
-        for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE){
-            draw_circle(window->framebuffer, center, j + 10,
-                        get_random_color(CIRCLES_OPACITY));
+        for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
+            draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE,
+                        random_color);
             draw_circle(window->framebuffer, center, j,
                         get_random_color(CIRCLES_OPACITY));
         }
     } else {
-        random_color = get_random_color(CIRCLES_OPACITY);
         for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
-            draw_circle(window->framebuffer, center, j + 10,
+            draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE,
+                        random_color);
+            draw_circle(window->framebuffer, center, j,
                         get_random_color(CIRCLES_OPACITY));
-            draw_circle(window->framebuffer, center, j, random_color);
         }
     }
 }
