@@ -6,6 +6,8 @@
 */
 
 #include <stddef.h>
+#include <stdlib.h>
+#include <time.h>
 #include "animations.h"
 #include "my_screensaver.h"
 #include "my.h"
@@ -24,6 +26,7 @@ int main(int ac, char **av)
     else if (error_code == MY_EXIT_FAILURE)
         return (MY_EXIT_FAILURE);
     animation_id = my_strnum_to_uint(av[1]);
+    srand(time(NULL));
     play_animation = get_animation_from_id(animation_id);
     if (!play_animation)
         return (MY_EXIT_FAILURE);
