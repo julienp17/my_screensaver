@@ -16,6 +16,7 @@
     void rainbow_rain(window_t *window);
     void blizzard(window_t *window);
     void bouncing_ball(window_t *window);
+    void circus_circles(window_t *window);
     void game_of_life(window_t *window);
     void radar(window_t *window);
 #endif
