@@ -17,10 +17,15 @@ SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
 				window.c \
 				get_animation.c \
-				utils.c \
+				random.c \
 				animations/rainbow_rain.c \
+				animations/bouncing_ball.c \
+				animations/game_of_life.c \
+				animations/radar.c \
 				data_structures/framebuffer.c \
 				shapes/line.c \
+				shapes/circle.c \
+				shapes/square.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
@@ -34,11 +39,14 @@ SRC_UT_F 	= 	test_usage.c \
 				libmy/test_my_strlen.c \
 				libmy/test_my_strnum_to_uint.c \
 
-INC			= 	-I./include/ -I./include/animations
+INC			= 	-I./include/ \
+				-I./include/animations \
+				-I./include/data_structures \
+				-I./include/shapes \
 
-CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS)
+CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS) $(DBFLAGS)
 
-LDFLAGS		=	-L./lib -lmy -lcsfml-graphics -lm
+LDFLAGS		=	-L./lib -lmy -lcsfml-graphics -lcsfml-system -lm
 
 LDFLAGS_UT	= 	-lcriterion -lgcov --coverage
 
