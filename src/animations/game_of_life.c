@@ -9,7 +9,7 @@
 #include <SFML/System/Time.h>
 #include "game_of_life.h"
 #include "window.h"
-#include "square.h"
+#include "shapes.h"
 #include "random.h"
 
 int **create_board(window_t *window);

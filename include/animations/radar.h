@@ -10,7 +10,7 @@
 
     #include <stdbool.h>
     #include "window.h"
-    #include "line.h"
+    #include "shapes.h"
 
     #define LINES_OPACITY       255
     #define DEEP_SKY_BLUE4      0, 95, 175

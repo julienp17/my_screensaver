@@ -8,7 +8,7 @@
 #include <math.h>
 #include <SFML/Graphics.h>
 #include "window.h"
-#include "square.h"
+#include "shapes.h"
 #include "rgb_tan.h"
 
 static sfColor get_next_primary_color(void);

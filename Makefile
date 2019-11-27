@@ -27,10 +27,8 @@ SRC_F 		= 	usage.c \
 				animations/radar.c \
 				animations/building_windows.c \
 				animations/rgb_tan.c \
+				animations/photon_cannon.c \
 				data_structures/framebuffer.c \
-				shapes/line.c \
-				shapes/circle.c \
-				shapes/square.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
@@ -51,9 +49,11 @@ INC			= 	-I./include/ \
 
 CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS)
 
-LDFLAGS		=	-L./lib -lmy -lcsfml-graphics -lcsfml-system -lm
+LDFLAGS		=	-lcsfml-graphics -lcsfml-system -lm $(MY_LDFLAGS)
 
 LDFLAGS_UT	= 	-lcriterion -lgcov --coverage
+
+MY_LDFLAGS 	=	-L./lib -lmy -lshapes
 
 DBFLAGS 	=	-g -g3 -ggdb
 
@@ -63,12 +63,13 @@ NAME_UT 	= 	unit_tests
 
 all: $(NAME)
 
-$(NAME): makelib $(OBJ) $(OBJ_M)
+$(NAME): makelibs $(OBJ) $(OBJ_M)
 	@echo -e "\e[1;32mCompiling $(NAME) binary... \e[0m"
 	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS)
 
-makelib:
+makelibs:
 	make -C ./lib/my/ all
+	make -C ./lib/shapes/ all
 
 tests_run: clean $(OBJ) $(OBJ_UT)
 	@echo -e "\e[1;32mCompiling $(NAME_UT) binary... \e[0m"
@@ -84,6 +85,10 @@ clean:
 	rm -f $(OBJ_UT)
 	@echo -e "\e[1;32mRemoving coverage files...\e[0m"
 	rm -f *.gc*
+	@echo -e "\e[1;32mCleaning libmy library... \e[0m"
+	@make -C ./lib/my/ clean
+	@echo -e "\e[1;32mCleaning shapes library... \e[0m"
+	@make -C ./lib/my/ clean
 
 fclean: clean
 	@echo -e "\e[1;32mRemoving $(NAME) binary...\e[0m"

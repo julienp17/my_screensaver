@@ -10,8 +10,7 @@
 #include "window.h"
 #include "blizzard.h"
 #include "random.h"
-#include "line.h"
-#include "circle.h"
+#include "shapes.h"
 #include "utils.h"
 
 void blizzard(window_t *window)

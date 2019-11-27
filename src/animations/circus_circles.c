@@ -10,7 +10,7 @@
 #include "window.h"
 #include "circus_circles.h"
 #include "random.h"
-#include "circle.h"
+#include "shapes.h"
 
 void display_circles(window_t *window, sfVector2f center, unsigned int index);
 

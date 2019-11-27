@@ -10,7 +10,7 @@
 
     #include <SFML/Graphics.h>
     #include "window.h"
-    #include "circle.h"
+    #include "shapes.h"
 
     #define BALL_SPEED          5
     #define BALL_RADIUS         40

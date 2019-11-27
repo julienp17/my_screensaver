@@ -9,7 +9,7 @@
 #include <stdbool.h>
 #include "bouncing_ball.h"
 #include "window.h"
-#include "circle.h"
+#include "shapes.h"
 #include "random.h"
 
 void bouncing_ball(window_t *window)

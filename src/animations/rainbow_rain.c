@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "rainbow_rain.h"
 #include "window.h"
-#include "line.h"
+#include "shapes.h"
 #include "random.h"
 
 void rainbow_rain(window_t *window)
