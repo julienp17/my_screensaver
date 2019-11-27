@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2019
 ** My Screensaver
 ** File description:
-** Simulation of a see
+** Points following a tangent in red, green, and blue
 */
 
+#include <math.h>
 #include <SFML/Graphics.h>
-#include "math.h"
 #include "window.h"
 #include "square.h"
 #include "rgb_tan.h"
