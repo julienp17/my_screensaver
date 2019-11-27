@@ -21,12 +21,12 @@ void random_numbers(window_t *window)
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
         if (sfClock_getElapsedTime(clock).microseconds / 1000 > DELAY) {
-        display_random_numbers(window, 0 + OFFSET);
-        display_random_numbers(window, window->height / 3 + OFFSET);
-        display_random_numbers(window, window->height / 1.5 + OFFSET);
-        window_refresh(window, &sfBlack);
-        sfClock_restart(clock);
-    }
+            display_random_numbers(window, 0 + OFFSET);
+            display_random_numbers(window, window->height / 3 + OFFSET);
+            display_random_numbers(window, window->height / 1.5 + OFFSET);
+            window_refresh(window, &sfBlack);
+            sfClock_restart(clock);
+        }
     }
 }
 
