@@ -16,6 +16,7 @@ OBJ 		= 	$(SRC:.c=.o)
 SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
 				window.c \
+				framebuffer.c \
 				get_animation.c \
 				random.c \
 				utils.c \
@@ -24,10 +25,10 @@ SRC_F 		= 	usage.c \
 				animations/bouncing_ball/bouncing_ball.c \
 				animations/circus_circles/circus_circles.c \
 				animations/radar/radar.c \
-				animations/vuilding_windows/building_windows.c \
+				animations/building_windows/building_windows.c \
 				animations/rgb_tan/rgb_tan.c \
-				animations/photon_cannon/photon_cannon.c \
-				data_structures/framebuffer.c \
+				animations/random_numbers/random_numbers.c \
+				animations/photon_cannon.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
