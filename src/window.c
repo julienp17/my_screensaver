@@ -22,7 +22,7 @@ window_t *window_create(unsigned int width, unsigned int height,
     sfVideoMode mode = {width, height, W_BPP};
 
     window->window = sfRenderWindow_create(mode, title,
-                                            sfClose | sfResize, 0);
+                                            sfClose | sfFullscreen, 0);
     window->width = width;
     window->height = height;
     window->framebuffer = framebuffer_create(width, height);
