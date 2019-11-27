@@ -23,8 +23,8 @@
     } droplet_t;
 
     void rainbow_rain(window_t *window);
-    void display_droplets(framebuffer_t *framebuffer, droplet_t **droplets);
-    droplet_t *droplet_create(void);
-    void droplet_fall(droplet_t *droplet);
-    void droplet_get_random_state(droplet_t *droplet);
+    void display_droplets(window_t *window, droplet_t **droplets);
+    droplet_t *droplet_create(window_t *window);
+    void droplet_fall(window_t *window, droplet_t *droplet);
+    void droplet_get_random_state(window_t *window, droplet_t *droplet);
 #endif
