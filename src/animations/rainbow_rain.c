@@ -53,7 +53,7 @@ void droplet_fall(window_t *window, droplet_t *droplet)
     if (droplet->beg.y >= window->height)
         droplet_get_random_state(window, droplet);
 }
-    #include <stdio.h>
+
 void droplet_get_random_state(window_t *window, droplet_t *droplet)
 {
     droplet->beg.x = get_random_float(0.0, (float)window->width);
@@ -63,5 +63,4 @@ void droplet_get_random_state(window_t *window, droplet_t *droplet)
     droplet->color = get_random_color(rand() % 255);
     droplet->end.x = droplet->beg.x;
     droplet->end.y = droplet->beg.y + droplet->len;
-    //printf("droplet beg x = %f\tdroplet beg y = %f\n", droplet->beg.x, droplet->beg.y);
 }
