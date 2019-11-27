@@ -15,4 +15,6 @@
                 sfVector2f point_b, sfColor color);
     void draw_circle(framebuffer_t *framebuffer, sfVector2f center,
                 unsigned int radius, sfColor color);
+    void draw_square(framebuffer_t *framebuffer, sfVector2i pos,
+                unsigned int size, sfColor color);
 #endif
