@@ -19,15 +19,14 @@ SRC_F 		= 	usage.c \
 				get_animation.c \
 				random.c \
 				utils.c \
-				animations/rainbow_rain.c \
-				animations/blizzard.c \
-				animations/bouncing_ball.c \
-				animations/circus_circles.c \
-				animations/game_of_life.c \
-				animations/radar.c \
-				animations/building_windows.c \
-				animations/rgb_tan.c \
-				animations/photon_cannon.c \
+				animations/rainbow_rain/rainbow_rain.c \
+				animations/blizzard/blizzard.c \
+				animations/bouncing_ball/bouncing_ball.c \
+				animations/circus_circles/circus_circles.c \
+				animations/radar/radar.c \
+				animations/vuilding_windows/building_windows.c \
+				animations/rgb_tan/rgb_tan.c \
+				animations/photon_cannon/photon_cannon.c \
 				data_structures/framebuffer.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
