@@ -22,6 +22,7 @@ void radar(window_t *window)
     line_t *line2 = line_create((sfVector2f){window->width / 2, window->height},
                                 (sfVector2f){0, window->height},
                                 (sfColor) {DEEP_SKY_BLUE4, LINES_OPACITY});
+    float step2_condition = window->height / 2;
 
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
@@ -30,13 +31,21 @@ void radar(window_t *window)
         draw_line(window->framebuffer, line2->point_a, line2->point_b,
                 line2->color);
         if (!update_lines_step_1(window, line1, line2)) {
-            if (line1->point_b.y < window->height / 2) {
+            if (line1->point_b.y < step2_condition) {
                 line1->point_b.x += 0.5;
                 line1->point_b.y += 0.75;
+            } else {
+                line1->point_a = (sfVector2f) {0, window->height / 2};
+                line1->point_b = (sfVector2f) {0, 0};
+                line1->color   = sfBlack;
             }
             if (line2->point_b.y > window->height / 2) {
                 line2->point_b.x -= 0.5;
                 line2->point_b.y -= 0.75;
+            } else {
+                line2->point_a = (sfVector2f) {window->width, window->height / 2};
+                line2->point_b = (sfVector2f) {window->width, window->height};
+                line2->color   = sfBlack;
             }
         }
         window_refresh(window, NULL);
