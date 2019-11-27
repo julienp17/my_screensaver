@@ -10,7 +10,7 @@
 
     #include "window.h"
 
-    #define MAX_ID          6
+    #define MAX_ID          7
 
     void (*get_animation_from_id(unsigned int nb))(window_t*);
     void rainbow_rain(window_t *window);
@@ -20,4 +20,5 @@
     void game_of_life(window_t *window);
     void radar(window_t *window);
     void building_windows(window_t *window);
+    void rgb_tan(window_t *window);
 #endif

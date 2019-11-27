@@ -26,6 +26,7 @@ SRC_F 		= 	usage.c \
 				animations/game_of_life.c \
 				animations/radar.c \
 				animations/building_windows.c \
+				animations/rgb_tan.c \
 				data_structures/framebuffer.c \
 				shapes/line.c \
 				shapes/circle.c \

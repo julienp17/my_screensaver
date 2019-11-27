@@ -19,7 +19,8 @@ void (*get_animation_from_id(unsigned int animation_id))(window_t*)
         &bouncing_ball,
         &circus_circles,
         &radar,
-        &building_windows
+        &building_windows,
+        &rgb_tan
     };
 
     if (animation_id < 1 || animation_id > MAX_ID) {
