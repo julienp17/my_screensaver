@@ -9,7 +9,9 @@ CC 		= 	gcc
 
 SRC		=	line.c \
 			square.c \
+			rectangle.c \
 			circle.c \
+			digit.c \
 
 OBJ		=	$(SRC:.c=.o)
 
