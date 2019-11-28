@@ -31,10 +31,14 @@
     } circle_t;
 
     void draw_line(framebuffer_t *framebuffer, sfVector2f point_a,
-                sfVector2f point_b, sfColor color);
+                        sfVector2f point_b, sfColor color);
+    void draw_square(framebuffer_t *framebuffer, sfVector2f pos,
+                        unsigned int size, sfColor color);
+    void draw_rectangle(framebuffer_t *framebuffer, sfVector2f pos,
+                        unsigned int width, unsigned int height, sfColor color);
     void draw_circle(framebuffer_t *framebuffer, sfVector2f center,
-                unsigned int radius, sfColor color);
-    void draw_square(framebuffer_t *framebuffer, sfVector2i pos,
+                        unsigned int radius, sfColor color);
+    void draw_digit(framebuffer_t *framebuffer, char digit, sfVector2f pos,
                 unsigned int size, sfColor color);
     line_t *line_create(sfVector2f point_a, sfVector2f point_b, sfColor color);
     square_t *square_create(int x, int y, unsigned int size, sfColor color);

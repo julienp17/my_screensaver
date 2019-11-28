@@ -22,7 +22,7 @@ void rgb_tan(window_t *window)
     sfRenderWindow_setFramerateLimit(window->window, RGB_TAN_FRAMERATE);
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
-        draw_square(window->framebuffer, (sfVector2i) {x, y},
+        draw_square(window->framebuffer, (sfVector2f) {x, y},
                     PIXEL_WIDTH, color);
         if (x < window->width) {
             x += 0.1;

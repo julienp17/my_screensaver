@@ -9,7 +9,7 @@
 #include "framebuffer.h"
 #include "shapes.h"
 
-void draw_rectangle(framebuffer_t *framebuffer, sfVector2i pos,
+void draw_rectangle(framebuffer_t *framebuffer, sfVector2f pos,
                 unsigned int width, unsigned int height, sfColor color)
 {
     for (unsigned int row = pos.y ; row < (pos.y + height) ; row++)

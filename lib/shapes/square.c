@@ -9,7 +9,7 @@
 #include "framebuffer.h"
 #include "shapes.h"
 
-void draw_square(framebuffer_t *framebuffer, sfVector2i pos,
+void draw_square(framebuffer_t *framebuffer, sfVector2f pos,
                 unsigned int size, sfColor color)
 {
     for (unsigned int i = pos.x ; i < (pos.x + size) ; i++)

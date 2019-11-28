@@ -28,6 +28,10 @@ SRC_F 		= 	usage.c \
 				animations/building_windows/building_windows.c \
 				animations/rgb_tan/rgb_tan.c \
 				animations/random_numbers/random_numbers.c \
+				animations/display_clock/display_clock.c \
+				animations/display_clock/digital_clock.c \
+				animations/display_clock/my_time.c \
+				animations/zebra_horizon/zebra_horizon.c \
 				animations/photon_cannon.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))

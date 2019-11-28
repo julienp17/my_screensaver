@@ -37,7 +37,7 @@ static void display_windows(window_t *window, int **windows)
 {
     for (unsigned int i = 0 ; i < window->height / 10 ; i++)
         for (unsigned int j = 0 ; j < window->width / 10 ; j++)
-            draw_square(window->framebuffer, (sfVector2i)
+            draw_square(window->framebuffer, (sfVector2f)
                         {j * window->width / 10, i * window->height / 10},
                         window->height / 10,
                         (windows[i][j]) ? sfYellow : sfBlack);

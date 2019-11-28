@@ -19,19 +19,19 @@ void draw_digit(framebuffer_t *framebuffer, char to_display, sfVector2f pos,
 
     if (to_display < '0' || to_display > '9')
         return;
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x + size, pos.y},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x + size, pos.y},
                     size * 2, size, get_opacity(color, digit, 6));
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x + size * 3, pos.y + size},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x + size * 3, pos.y + size},
                     size, size * 2, get_opacity(color, digit, 5));
-    draw_rectangle(framebuffer,(sfVector2i){pos.x + size * 3, pos.y + size * 4},
+    draw_rectangle(framebuffer,(sfVector2f){pos.x + size * 3, pos.y + size * 4},
                     size, size * 2, get_opacity(color, digit, 4));
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x + size, pos.y + size * 6},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x + size, pos.y + size * 6},
                     size * 2, size, get_opacity(color, digit, 3));
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x, pos.y + size * 4},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x, pos.y + size * 4},
                     size, size * 2, get_opacity(color, digit, 2));
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x, pos.y + size},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x, pos.y + size},
                     size, size * 2, get_opacity(color, digit, 1));
-    draw_rectangle(framebuffer, (sfVector2i) {pos.x + size, pos.y + size * 3},
+    draw_rectangle(framebuffer, (sfVector2f) {pos.x + size, pos.y + size * 3},
                     size * 2, size, get_opacity(color, digit, 0));
 }
 

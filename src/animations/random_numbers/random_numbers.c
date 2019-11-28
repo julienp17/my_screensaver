@@ -17,6 +17,9 @@ void random_numbers(window_t *window)
 {
     sfClock *clock = sfClock_create();
 
+    display_random_numbers(window, 0 + OFFSET);
+    display_random_numbers(window, window->height / 3 + OFFSET);
+    display_random_numbers(window, window->height / 1.5 + OFFSET);
     window_refresh(window, &sfBlack);
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
