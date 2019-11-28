@@ -9,6 +9,8 @@
 - [Grade](#grade)
 - [Screensavers](#screensavers)
 
+The program is intended to not be interactive
+
 ### Usage
 
 ![USAGE](bonus/usage.png)
@@ -19,4 +21,25 @@
 
 ### Screensavers
 
-Below is an exhaustive list of all my animations :
+Below is an exhaustive preview of all the animations :
+
+#### Rainbow rain
+![Rainbow rain](bonus/rainbow_rain.gif)
+
+#### Blizzard
+![Blizzard](bonus/blizzard.gif)
+
+#### Circus circles
+![Circus circles](bonus/circus_circles.gif)
+
+#### Building lights
+![Building lights](bonus/building_lights.gif)
+
+#### RGB Tan
+![RGB Tan](bonus/rgb_tan.gif)
+
+#### Random Numbers
+![Randow Numbers](bonus/random_numbers.gif)
+
+#### Zebra Horizon
+![Zebra Horizon](bonus/zebra_horizon.gif)
