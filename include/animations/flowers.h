@@ -11,9 +11,9 @@
     #include <SFML/Graphics.h>
     #include "window.h"
 
-    #define SPACING_BEG             14
-    #define SPACING_MIN             10
-    #define SPACING_MAX             18
+    #define SPACING_BEG             8
+    #define SPACING_MIN             4
+    #define SPACING_MAX             12
     #define DELAY                   10
     #define POINTS_WIDTH            2
     #define FLOWER_1_ANGLE_BEG      137.3
