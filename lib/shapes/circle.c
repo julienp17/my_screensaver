@@ -34,6 +34,13 @@ void draw_circle(framebuffer_t *framebuffer, sfVector2f center,
     }
 }
 
+void draw_circle_outline(framebuffer_t *framebuffer, sfVector2f center,
+                        unsigned int radius, sfColor color)
+{
+    draw_circle(framebuffer, center, radius + 1, color);
+    draw_circle(framebuffer, center, radius, sfBlack);
+}
+
 circle_t *circle_create(float x, float y, unsigned int radius, sfColor color)
 {
     circle_t *circle = malloc(sizeof(*circle));
