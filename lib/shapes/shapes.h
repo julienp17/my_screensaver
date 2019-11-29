@@ -11,6 +11,8 @@
     #include <SFML/Graphics.h>
     #include "framebuffer.h"
 
+    #define PI  3.14159265358979323846
+
     typedef struct line {
         sfVector2f point_a;
         sfVector2f point_b;
@@ -37,6 +39,8 @@
     void draw_rectangle(framebuffer_t *framebuffer, sfVector2f pos,
                         unsigned int width, unsigned int height, sfColor color);
     void draw_circle(framebuffer_t *framebuffer, sfVector2f center,
+                        unsigned int radius, sfColor color);
+    void draw_circle_outline(framebuffer_t *framebuffer, sfVector2f center,
                         unsigned int radius, sfColor color);
     void draw_digit(framebuffer_t *framebuffer, char digit, sfVector2f pos,
                 unsigned int size, sfColor color);
