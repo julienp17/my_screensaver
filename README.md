@@ -1,27 +1,26 @@
 ## my_screensaver
 > Graphical
 >
-> Render graphical effects and animations
+> Render graphical effects and animations with the CSFML library
 >
 > 3 weeks, solo project
 
 - [Usage](#usage)
-- [Grade](#grade)
 - [Screensavers](#screensavers)
 
-The program is intended to not be interactive
+One of the coolest projects to do
+
+Heavily inspired by the coding challenges of the [Coding train](https://thecodingtrain.com/). Shiffman for President !
 
 ### Usage
 
 ![USAGE](bonus/usage.png)
 
-### Grade
-
-![GRADE](bonus/grade_black.png)
+My program is intended to not be interactive
 
 ### Screensavers
 
-Below is an exhaustive preview of all the animations :
+Below is an exhaustive preview of all my animations :
 
 #### Rainbow rain
 ![Rainbow rain](bonus/rainbow_rain.gif)
