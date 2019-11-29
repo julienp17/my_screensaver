@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <SFML/Graphics.h>
-#include "flower.h"
+#include "flowers.h"
 #include "window.h"
 
 flower_t **init_flowers(window_t *window, unsigned int spacing)

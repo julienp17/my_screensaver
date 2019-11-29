@@ -10,7 +10,7 @@
 #include <math.h>
 #include <SFML/Graphics.h>
 #include "window.h"
-#include "flower.h"
+#include "flowers.h"
 #include "shapes.h"
 #include "utils.h"
 #include "random.h"
