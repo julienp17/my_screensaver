@@ -38,6 +38,8 @@ SRC_F 		= 	usage.c \
 				animations/lorenz_attractor/lorenz_attractor.c \
 				animations/solar_system/solar_system.c \
 				animations/bubble_sort_visualizer/bubble_sort_visualizer.c \
+				animations/flowers/flowers.c \
+				animations/flowers/flower_create.c \
 
 SRC_UT   	=	$(addprefix $(SRC_UT_D), $(SRC_UT_F))
 OBJ_UT 	 	=	$(SRC_UT:.c=.o)
