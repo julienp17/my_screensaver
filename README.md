@@ -43,3 +43,15 @@ Below is an exhaustive preview of all the animations :
 
 #### Zebra Horizon
 ![Zebra Horizon](bonus/zebra_horizon.gif)
+
+#### Ten print
+![Ten Print](bonus/ten_print.gif)
+
+#### Hamon
+![Hamon](bonus/hamon.gif)
+
+#### Laser
+![Laser](bonus/laser.gif)
+
+#### Bubble sort visualization
+![Bubble sort visualizer](bonus/bubble_sort.gif)
