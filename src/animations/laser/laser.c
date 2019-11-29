@@ -27,8 +27,8 @@ void laser(window_t *window)
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
         if (sfClock_getElapsedTime(clock).microseconds / 1000 > DELAY) {
-            draw_mirrors(window);
             draw_photons(window, photons);
+            draw_mirrors(window);
             update_photons(window, photons);
             sfClock_restart(clock);
             window_refresh(window, &sfBlack);
