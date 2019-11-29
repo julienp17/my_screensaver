@@ -10,7 +10,7 @@
 
 int get_random_int(int const min, int const max)
 {
-    return ((rand() / RAND_MAX * (max - min)) + min);
+    return ((rand() % (max - min + 1)) + min);
 }
 
 int get_random_choice_int(int choice1, int choice2)
