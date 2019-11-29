@@ -31,6 +31,7 @@ SRC_F 		= 	usage.c \
 				animations/display_clock/digital_clock.c \
 				animations/display_clock/my_time.c \
 				animations/zebra_horizon/zebra_horizon.c \
+				animations/ten_print/ten_print.c \
 				animations/laser/laser.c \
 				animations/laser/photons.c \
 				animations/hamon/hamon.c \
@@ -52,7 +53,7 @@ INC			= 	-I./include/ \
 				-I./include/data_structures \
 				-I./include/shapes \
 
-CFLAGS		= 	-W -Wall -Wextra $(INC) $(LDFLAGS) $(DBFLAGS)
+CFLAGS		= 	-W -Wall -Wextra -Werror $(INC) $(LDFLAGS)
 
 LDFLAGS		=	-lcsfml-graphics -lcsfml-system -lm $(MY_LDFLAGS)
 
@@ -70,7 +71,7 @@ all: $(NAME)
 
 $(NAME): makelibs $(OBJ) $(OBJ_M)
 	@echo -e "\e[1;32mCompiling $(NAME) binary... \e[0m"
-	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS) $(DBFLAGS)
+	$(CC) -o $(NAME) $(OBJ_M) $(OBJ) $(CFLAGS)
 
 makelibs:
 	make -C ./lib/my/ all

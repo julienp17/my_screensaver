@@ -16,7 +16,7 @@ void (*get_animation_from_id(unsigned int animation_id))(window_t*)
     void (*animations[])(window_t*) = {
         &rainbow_rain, &blizzard, &bouncing_ball, &circus_circles,
         &building_windows, &rgb_tan, &random_numbers, &display_clock,
-        &zebra_horizon, &laser, &hamon
+        &zebra_horizon, &ten_print, &laser, &hamon,
     };
 
     if (animation_id < 1 || animation_id > MAX_ID) {
