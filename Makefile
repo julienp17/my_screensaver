@@ -24,7 +24,6 @@ SRC_F 		= 	usage.c \
 				animations/blizzard/blizzard.c \
 				animations/bouncing_ball/bouncing_ball.c \
 				animations/circus_circles/circus_circles.c \
-				animations/radar/radar.c \
 				animations/building_windows/building_windows.c \
 				animations/rgb_tan/rgb_tan.c \
 				animations/random_numbers/random_numbers.c \

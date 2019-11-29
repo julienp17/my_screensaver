@@ -10,19 +10,18 @@
 
     #include "window.h"
 
-    #define MAX_ID          10
+    #define MAX_ID          11
 
     void (*get_animation_from_id(unsigned int nb))(window_t*);
     void rainbow_rain(window_t *window);
     void blizzard(window_t *window);
     void bouncing_ball(window_t *window);
     void circus_circles(window_t *window);
-    void game_of_life(window_t *window);
-    void radar(window_t *window);
     void building_windows(window_t *window);
     void rgb_tan(window_t *window);
     void random_numbers(window_t *window);
     void display_clock(window_t *window);
     void zebra_horizon(window_t *window);
-    void photon_cannon(window_t *window);
+    void laser(window_t *window);
+    void hamon(window_t *window);
 #endif
