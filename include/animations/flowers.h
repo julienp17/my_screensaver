@@ -13,9 +13,9 @@
 
     #define FRAMERATE               500
     #define SPACING_BEG             4
-    #define SPACING_MIN             4
-    #define SPACING_MAX             12
-    #define DELAY                   10
+    #define SPACING_MIN             3
+    #define SPACING_MAX             6
+    #define DELAY                   1
     #define POINTS_WIDTH            2
     #define FLOWER_1_ANGLE_BEG      137.2
     #define FLOWER_1_COLOR_BEG      sfMagenta
