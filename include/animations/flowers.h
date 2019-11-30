@@ -11,12 +11,13 @@
     #include <SFML/Graphics.h>
     #include "window.h"
 
-    #define SPACING_BEG             8
+    #define FRAMERATE               500
+    #define SPACING_BEG             4
     #define SPACING_MIN             4
     #define SPACING_MAX             12
     #define DELAY                   10
     #define POINTS_WIDTH            2
-    #define FLOWER_1_ANGLE_BEG      137.3
+    #define FLOWER_1_ANGLE_BEG      137.2
     #define FLOWER_1_COLOR_BEG      sfMagenta
     #define FLOWER_2_ANGLE_BEG      137.6
     #define FLOWER_2_COLOR_BEG      sfYellow
