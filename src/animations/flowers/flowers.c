@@ -18,7 +18,7 @@
 static void draw_flowers(framebuffer_t *framebuffer, flower_t **flowers,
                         unsigned int time, unsigned int width);
 static void get_next_pos(flower_t *flower, unsigned int const time);
-static void reset_flowers(flower_t **flowers, unsigned int spacing);
+static void reset_flowers(flower_t **flowers);
 static void update_time(window_t *window, flower_t **flowers,
                         unsigned int *time);
 
@@ -50,7 +50,7 @@ static void update_time(window_t *window, flower_t **flowers,
     *time = *time + 1;
     if (flowers[1]->pos.y < 0) {
         framebuffer_clear(window->framebuffer, sfBlack);
-        reset_flowers(flowers, get_random_int(SPACING_MIN, SPACING_MAX));
+        reset_flowers(flowers);
         *time = 0;
     }
 }
@@ -74,14 +74,14 @@ static void get_next_pos(flower_t *flower, unsigned int const time)
                     + flower->center.y;
 }
 
-static void reset_flowers(flower_t **flowers, unsigned int spacing)
+static void reset_flowers(flower_t **flowers)
 {
     sfColor tmp_color = {0, 0, 0, 0};
     float tmp_y = 0.0;
     float tmp_angle = 0.0;
 
     for (unsigned int i = 0 ; flowers[i] ; i++)
-        flowers[i]->spacing = spacing;
+        flowers[i]->spacing = get_random_int(SPACING_MIN, SPACING_MAX);
     tmp_color = flowers[0]->color;
     flowers[0]->color = flowers[1]->color;
     flowers[1]->color = flowers[2]->color;
