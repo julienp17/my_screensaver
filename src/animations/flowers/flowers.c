@@ -19,7 +19,8 @@ static void draw_flowers(framebuffer_t *framebuffer, flower_t **flowers,
                         unsigned int time, unsigned int width);
 static void get_next_pos(flower_t *flower, unsigned int const time);
 static void reset_flowers(flower_t **flowers, unsigned int spacing);
-static bool should_reset(window_t *window, flower_t *flower);
+static void update_time(window_t *window, flower_t **flowers,
+                        unsigned int *time);
 
 void flowers(window_t *window)
 {
@@ -27,30 +28,31 @@ void flowers(window_t *window)
     flower_t **flowers = init_flowers(window, SPACING_BEG);
     sfClock *clock = sfClock_create();
 
-    sfRenderWindow_setFramerateLimit(window->window, 500);
+    sfRenderWindow_setFramerateLimit(window->window, FRAMERATE);
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
         if (sfClock_getElapsedTime(clock).microseconds / 1000 > DELAY) {
             draw_flowers(window->framebuffer, flowers, time, POINTS_WIDTH);
-            time++;
-            if (should_reset(window, flowers[0])) {
-                framebuffer_clear(window->framebuffer, sfBlack);
-                reset_flowers(flowers,get_random_int(SPACING_MIN, SPACING_MAX));
-                time = 0;
-            }
+            update_time(window, flowers, &time);
             window_refresh(window, NULL);
             sfClock_restart(clock);
         }
     }
+    for (unsigned int i = 0 ; flowers[i] ; i++)
+        free(flowers[i]);
     free(flowers);
+    sfRenderWindow_setFramerateLimit(window->window, W_MAX_FPS);
 }
 
-static bool should_reset(window_t *window, flower_t *flower)
+static void update_time(window_t *window, flower_t **flowers,
+                        unsigned int *time)
 {
-    if (flower->center.y == window->height / 4)
-        return (flower->pos.y > window->height);
-    else
-        return (flower->pos.y < 0);
+    *time = *time + 1;
+    if (flowers[1]->pos.y < 0) {
+        framebuffer_clear(window->framebuffer, sfBlack);
+        reset_flowers(flowers, get_random_int(SPACING_MIN, SPACING_MAX));
+        *time = 0;
+    }
 }
 
 static void draw_flowers(framebuffer_t *framebuffer, flower_t **flowers,
