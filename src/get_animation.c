@@ -15,7 +15,7 @@ void (*get_animation_from_id(unsigned int animation_id))(window_t*)
     void (*animation)(window_t*) = NULL;
     void (*animations[])(window_t*) = {
         &rainbow_rain, &blizzard, &bouncing_ball, &circus_circles,
-        &building_windows, &rgb_tan, &random_numbers, &display_clock,
+        &building_windows, &rgb_tan, &random_numbers, &digital_clock,
         &zebra_horizon, &ten_print, &laser, &hamon, &lorenz_attractor,
         &solar_system, &bubble_sort_visualizer, &flowers
     };
