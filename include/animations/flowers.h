@@ -18,10 +18,10 @@
     #define DELAY                   1
     #define POINTS_WIDTH            2
     #define FLOWER_1_ANGLE_BEG      137.2
-    #define FLOWER_1_COLOR_BEG      sfMagenta
     #define FLOWER_2_ANGLE_BEG      137.6
-    #define FLOWER_2_COLOR_BEG      sfYellow
     #define FLOWER_3_ANGLE_BEG      137.5
+    #define FLOWER_1_COLOR_BEG      sfMagenta
+    #define FLOWER_2_COLOR_BEG      sfYellow
     #define FLOWER_3_COLOR_BEG      sfCyan
 
     typedef struct flower {
