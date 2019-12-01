@@ -40,7 +40,7 @@ int main(int ac, char **av)
 int launch_animation(unsigned int animation_id)
 {
     window_t *window = NULL;
-    void (*play_animation)(window_t*) = get_animation_from_id(animation_id);
+    void (*play_animation)(window_t *) = get_animation_from_id(animation_id);
 
     if (!play_animation)
         return (MY_EXIT_FAILURE);

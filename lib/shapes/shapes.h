@@ -46,5 +46,6 @@
                 unsigned int size, sfColor color);
     line_t *line_create(sfVector2f point_a, sfVector2f point_b, sfColor color);
     square_t *square_create(int x, int y, unsigned int size, sfColor color);
-    circle_t *circle_create(float x, float y, unsigned int radius, sfColor color);
+    circle_t *circle_create(float x, float y, unsigned int radius,
+                            sfColor color);
 #endif

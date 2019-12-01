@@ -10,10 +10,10 @@
 #include "window.h"
 #include "my.h"
 
-void (*get_animation_from_id(unsigned int animation_id))(window_t*)
+void (*get_animation_from_id(unsigned int animation_id))(window_t *)
 {
-    void (*animation)(window_t*) = NULL;
-    void (*animations[])(window_t*) = {
+    void (*animation)(window_t *) = NULL;
+    void (*animations[])(window_t *) = {
         &blizzard, &circus_circles, &rainbow_rain, &flowers,
         &lorenz_attractor, &hamon, &laser, &random_numbers,
         &digital_clock, &ten_print, &zebra_horizon, &building_windows,

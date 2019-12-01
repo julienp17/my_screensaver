@@ -12,7 +12,6 @@
 #include "framebuffer.h"
 
 void poll_events(sfRenderWindow *window);
-void (*get_animation_by_id(unsigned int nb))(framebuffer_t*);
 void destroy_window(window_t *window);
 
 window_t *window_create(unsigned int width, unsigned int height,

@@ -56,7 +56,7 @@
         "15: bubble sort visualizer: a visualization of the bubble sort " \
         "algorithm."
 
-    void (*get_animation_from_id(unsigned int id))(window_t*);
+    void (*get_animation_from_id(unsigned int id))(window_t *);
     void blizzard(window_t *window);
     void circus_circles(window_t *window);
     void rainbow_rain(window_t *window);

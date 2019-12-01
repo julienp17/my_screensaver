@@ -30,7 +30,7 @@ flower_t **init_flowers(window_t *window, unsigned int spacing)
                                 FLOWER_3_ANGLE_BEG,
                                 FLOWER_3_COLOR_BEG);
     flowers[3] = NULL;
-    return(flowers);
+    return (flowers);
 }
 
 flower_t *flower_create(sfVector2f center, unsigned int spacing, float angle,
