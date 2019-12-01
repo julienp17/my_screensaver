@@ -24,35 +24,20 @@ It assumes you have a 1920x1080 resolution.
 
 Below is an exhaustive preview of all my animations :
 
-#### Rainbow rain
-![Rainbow rain](bonus/rainbow_rain.gif)
-
 #### Blizzard
 ![Blizzard](bonus/blizzard.gif)
-
-#### Bouncing ball
-![Boucing Ball](bonus/bouncing_ball.gif)
 
 #### Circus circles
 ![Circus circles](bonus/circus_circles.gif)
 
-#### Building lights
-![Building lights](bonus/building_lights.gif)
+#### Rainbow rain
+![Rainbow rain](bonus/rainbow_rain.gif)
 
-#### RGB Tan
-![RGB Tan](bonus/rgb_tan.gif)
+#### Flowers
+![Flowers](bonus/flowers.gif)
 
-#### Random Numbers
-![Randow Numbers](bonus/random_numbers.gif)
-
-#### Digital Clock
-![Digital Clock](bonus/digital_clock.gif)
-
-#### Zebra Horizon
-![Zebra Horizon](bonus/zebra_horizon.gif)
-
-#### Ten print
-![Ten Print](bonus/ten_print.gif)
+#### Lorentz Attractor
+![Lorentz Attractor](bonus/lorenz_attractor.gif)
 
 #### Hamon
 ![Hamon](bonus/hamon.gif)
@@ -60,13 +45,28 @@ Below is an exhaustive preview of all my animations :
 #### Laser
 ![Laser](bonus/laser.gif)
 
-#### Lorentz Attractor
-![Lorentz Attractor](bonus/lorenz_attractor.gif)
+#### Random Numbers
+![Randow Numbers](bonus/random_numbers.gif)
+
+#### Digital Clock
+![Digital Clock](bonus/digital_clock.gif)
+
+#### Ten print
+![Ten Print](bonus/ten_print.gif)
+
+#### Zebra Horizon
+![Zebra Horizon](bonus/zebra_horizon.gif)
+
+#### Building lights
+![Building lights](bonus/building_lights.gif)
+
+#### Bouncing ball
+![Boucing Ball](bonus/bouncing_ball.gif)
+
+#### RGB Tan
+![RGB Tan](bonus/rgb_tan.gif)
 
 #### Bubble sort visualization
 ![Bubble sort visualizer](bonus/bubble_sort.gif)
-
-#### Flowers
-![Flowers](bonus/flowers.gif)
 
 My favorite animation is the laser one
