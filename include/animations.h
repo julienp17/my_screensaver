@@ -20,7 +20,7 @@
     void building_windows(window_t *window);
     void rgb_tan(window_t *window);
     void random_numbers(window_t *window);
-    void display_clock(window_t *window);
+    void digital_clock(window_t *window);
     void zebra_horizon(window_t *window);
     void ten_print(window_t *window);
     void laser(window_t *window);
