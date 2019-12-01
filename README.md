@@ -10,13 +10,15 @@
 
 One of the coolest projects to do
 
-Heavily inspired by the coding challenges of the [Coding train](https://thecodingtrain.com/). Shiffman for President !
+Heavily inspired by the coding challenges of the
+[Coding train](https://thecodingtrain.com/). Shiffman for President !
 
 ### Usage
 
 ![USAGE](bonus/usage.png)
 
-My program is intended to not be interactive
+My program is intended to not be interactive.
+It assumes you have a 1920x1080 resolution.
 
 ### Screensavers
 
@@ -27,6 +29,9 @@ Below is an exhaustive preview of all my animations :
 
 #### Blizzard
 ![Blizzard](bonus/blizzard.gif)
+
+#### Bouncing ball
+![Boucing Ball](bonus/bouncing_ball.gif)
 
 #### Circus circles
 ![Circus circles](bonus/circus_circles.gif)
@@ -40,6 +45,9 @@ Below is an exhaustive preview of all my animations :
 #### Random Numbers
 ![Randow Numbers](bonus/random_numbers.gif)
 
+#### Digital Clock
+![Digital Clock](bonus/digital_clock.gif)
+
 #### Zebra Horizon
 ![Zebra Horizon](bonus/zebra_horizon.gif)
 
@@ -52,5 +60,13 @@ Below is an exhaustive preview of all my animations :
 #### Laser
 ![Laser](bonus/laser.gif)
 
+#### Lorentz Attractor
+![Lorentz Attractor](bonus/lorenz_attractor.gif)
+
 #### Bubble sort visualization
 ![Bubble sort visualizer](bonus/bubble_sort.gif)
+
+#### Flowers
+![Flowers](bonus/flowers.gif)
+
+My favorite animation is the laser one
