@@ -5,23 +5,21 @@
 ** Header file for my screensaver
 */
 
-#ifndef MY_SCREENSAVER_H_
-    #define MY_SCREENSAVER_H_
-
-    #include <stdbool.h>
-    #include "framebuffer.h"
+#ifndef USAGE_H_
+    #define USAGE_H_
 
     #define MY_EXIT_SUCCESS             0
     #define MY_EXIT_FAILURE             84
     #define MY_EXIT_OPTION              92
 
-    #define SHORT_PROGRAM_DESCRIPTION   "animation rendering in a CSFML window."
+    #define SHORT_PROGRAM_DESCRIPTION   \
+            "animation rendering in a CSFML window.\n"
 
     int check_args(int ac, char **av);
+    int check_options(char *arg);
+
     void print_help(void);
     void print_usage(void);
     void print_options(void);
-    bool is_option(char *str);
-
-    int launch_animation(unsigned int animation_id);
+    void print_animations_descriptions(void);
 #endif
