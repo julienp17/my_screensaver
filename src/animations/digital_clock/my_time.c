@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "display_clock.h"
+#include "digital_clock.h"
 
 my_time_t *init_my_time(void)
 {
