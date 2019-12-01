@@ -9,9 +9,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include "animations.h"
-#include "my_screensaver.h"
+#include "usage.h"
 #include "my.h"
 #include "window.h"
+#include "random.h"
+
+int launch_animation(unsigned int animation_id);
 
 int main(int ac, char **av)
 {
@@ -23,7 +26,11 @@ int main(int ac, char **av)
         return (MY_EXIT_SUCCESS);
     else if (exit_code == MY_EXIT_FAILURE)
         return (MY_EXIT_FAILURE);
-    animation_id = my_strnum_to_uint(av[1]);
+    srand(time(NULL));
+    if (my_str_isnum_pos(av[1]))
+        animation_id = my_strnum_to_uint(av[1]);
+    else
+        animation_id = get_random_int(1, MAX_ID);
     exit_code = launch_animation(animation_id);
     if (exit_code == MY_EXIT_FAILURE)
         return (MY_EXIT_FAILURE);
@@ -37,7 +44,6 @@ int launch_animation(unsigned int animation_id)
 
     if (!play_animation || !window)
         return (MY_EXIT_FAILURE);
-    srand(time(NULL));
     play_animation(window);
     window_destroy(window);
     return (MY_EXIT_SUCCESS);
