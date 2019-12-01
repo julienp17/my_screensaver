@@ -15,6 +15,7 @@ SRC			= 	$(addprefix $(SRC_D), $(SRC_F))
 OBJ 		= 	$(SRC:.c=.o)
 SRC_D 		= 	src/
 SRC_F 		= 	usage.c \
+				print_usage.c \
 				window.c \
 				framebuffer.c \
 				get_animation.c \
