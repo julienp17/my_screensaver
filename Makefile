@@ -20,6 +20,7 @@ SRC_F 		= 	usage.c \
 				get_animation.c \
 				random.c \
 				utils.c \
+				color_convertion.c \
 				animations/rainbow_rain/rainbow_rain.c \
 				animations/blizzard/blizzard.c \
 				animations/bouncing_ball/bouncing_ball.c \
@@ -27,9 +28,8 @@ SRC_F 		= 	usage.c \
 				animations/building_windows/building_windows.c \
 				animations/rgb_tan/rgb_tan.c \
 				animations/random_numbers/random_numbers.c \
-				animations/display_clock/display_clock.c \
-				animations/display_clock/digital_clock.c \
-				animations/display_clock/my_time.c \
+				animations/digital_clock/digital_clock.c \
+				animations/digital_clock/my_time.c \
 				animations/zebra_horizon/zebra_horizon.c \
 				animations/ten_print/ten_print.c \
 				animations/laser/laser.c \
