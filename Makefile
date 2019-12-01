@@ -36,7 +36,6 @@ SRC_F 		= 	usage.c \
 				animations/laser/photons.c \
 				animations/hamon/hamon.c \
 				animations/lorenz_attractor/lorenz_attractor.c \
-				animations/solar_system/solar_system.c \
 				animations/bubble_sort_visualizer/bubble_sort_visualizer.c \
 				animations/flowers/flowers.c \
 				animations/flowers/flower_create.c \
