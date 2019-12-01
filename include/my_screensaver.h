@@ -22,4 +22,6 @@
     void print_usage(void);
     void print_options(void);
     bool is_option(char *str);
+
+    int launch_animation(unsigned int animation_id);
 #endif
