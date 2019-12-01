@@ -12,31 +12,33 @@
 #include "random.h"
 #include "shapes.h"
 
-void display_circles(window_t *window, sfVector2f center, unsigned int index);
+void display_circles(window_t *window, sfVector2f center, unsigned int size);
 
 void circus_circles(window_t *window)
 {
     sfVector2f center = {window->width / 2, window->height / 2};
     sfClock *clock = sfClock_create();
-    unsigned int i = 0;
+    unsigned int size = 10;
+    unsigned int scale = 1;
 
     while (sfRenderWindow_isOpen(window->window)) {
         poll_events(window->window);
         if (sfClock_getElapsedTime(clock).microseconds / 1000 > INTERVAL) {
-            display_circles(window, center, i);
+            display_circles(window, center, size);
             sfClock_restart(clock);
         }
-        if (i < window->height / 2 - OUTLINE_DISTANCE)
-            i++;
+        if (size == 0 || size > window->height / 2 - OUTLINE_DISTANCE)
+            scale = -scale;
+        size += scale;
         window_refresh(window, NULL);
     }
 }
 
-void display_circles(window_t *window, sfVector2f center, unsigned int index)
+void display_circles(window_t *window, sfVector2f center, unsigned int size)
 {
     sfColor random_color = get_random_color(CIRCLES_OPACITY);
 
-    for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
+    for (int j = size ; j > 0 ; j = j - CIRCLES_DISTANCE) {
         draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE / 2,
                     random_color);
         draw_circle(window->framebuffer, center, j,
