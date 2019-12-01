@@ -36,19 +36,10 @@ void display_circles(window_t *window, sfVector2f center, unsigned int index)
 {
     sfColor random_color = get_random_color(CIRCLES_OPACITY);
 
-    if (index < window->height / 2) {
-        for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
-            draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE,
-                        random_color);
-            draw_circle(window->framebuffer, center, j,
-                        get_random_color(CIRCLES_OPACITY));
-        }
-    } else {
-        for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
-            draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE,
-                        random_color);
-            draw_circle(window->framebuffer, center, j,
-                        get_random_color(CIRCLES_OPACITY));
-        }
+    for (int j = index ; j > 0 ; j = j - CIRCLES_DISTANCE) {
+        draw_circle(window->framebuffer, center, j + OUTLINE_DISTANCE / 2,
+                    random_color);
+        draw_circle(window->framebuffer, center, j,
+                    get_random_color(CIRCLES_OPACITY));
     }
 }
