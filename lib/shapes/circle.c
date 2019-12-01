@@ -16,21 +16,19 @@
 void draw_circle(framebuffer_t *framebuffer, sfVector2f center,
                 unsigned int radius, sfColor color)
 {
-    int row = center.y - radius;
-    int col = center.x - radius;
-    int x = 0;
-    int y = 0;
-
-    while (row < (center.y + radius)) {
-        col = center.x - radius;
-        while (col < (center.x + radius)) {
-            x = col - center.x;
-            y = row - center.y;
-            if (pow(x, 2) + pow(y, 2) <= pow(radius, 2))
-                my_put_pixel(framebuffer, col, row, color);
-            col = col + 1;
+    for (int y = center.y - radius ; y < (center.y + radius) ; y++) {
+        if (y < 0)
+            continue;
+        else if (y > (int)(framebuffer->height))
+            break;
+        for (int x = center.x - radius ; x < (center.x + radius) ; x++) {
+            if (x < 0)
+                continue;
+            else if (x > (int)(framebuffer->width))
+                break;
+            if (pow(x - center.x, 2) + pow(y - center.y, 2) <= pow(radius, 2))
+                my_put_pixel(framebuffer, x, y, color);
         }
-        row = row + 1;
     }
 }
 
