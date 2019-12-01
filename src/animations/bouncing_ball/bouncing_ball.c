@@ -14,8 +14,9 @@
 
 void bouncing_ball(window_t *window)
 {
+    unsigned int ball_radius = window->height / 4;
     circle_t *circle = circle_create(window->width / 2, window->height / 2,
-                                    BALL_RADIUS, get_random_color(255));
+                                    ball_radius, get_random_color(255));
 
     circle->speed.x = (float)(get_random_choice_int(-BALL_SPEED, BALL_SPEED));
     circle->speed.y = (float)(get_random_choice_int(-BALL_SPEED, BALL_SPEED));
