@@ -13,7 +13,6 @@
     #include "shapes.h"
 
     #define BALL_SPEED          5
-    #define BALL_RADIUS         40
 
     void bouncing_ball(window_t *window);
     void check_ball_bounce(circle_t *circle, unsigned int width_limit,
