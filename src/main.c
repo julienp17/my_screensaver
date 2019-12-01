@@ -42,9 +42,11 @@ int launch_animation(unsigned int animation_id)
     window_t *window = NULL;
     void (*play_animation)(window_t*) = get_animation_from_id(animation_id);
 
-    if (!play_animation || !window)
+    if (!play_animation)
         return (MY_EXIT_FAILURE);
     window = window_create(W_WIDTH, W_HEIGHT, W_TITLE);
+    if (!window)
+        return (MY_EXIT_FAILURE);
     play_animation(window);
     window_destroy(window);
     return (MY_EXIT_SUCCESS);
