@@ -6,6 +6,7 @@
 > 3 weeks, solo project
 
 - [Usage](#usage)
+- [Video Preview](#video-preview)
 - [Screensavers](#screensavers)
 
 One of the coolest projects to do
@@ -18,7 +19,9 @@ Heavily inspired by the coding challenges of the
 ![USAGE](bonus/usage.png)
 
 My program is intended to not be interactive.
-It assumes you have a 1920x1080 resolution.
+
+### Video Preview
+[Click here to see a video preview](https://www.youtube.com/watch?v=ZtjTFDD-Wh4)
 
 ### Screensavers
 
